@@ -41,6 +41,7 @@ public class SwitchEx1 {
             case 10:
             case 11:
                 System.out.println("현재 계절은 가을입니다.");
+                break;
             case 12:
             case 1:
             case 2:

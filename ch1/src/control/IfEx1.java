@@ -18,6 +18,7 @@ public class IfEx1 {
         // 사용자로부터 점수를 입력받아 60 이상이면 합격입니다 메세지 출력
         Scanner sc = new Scanner(System.in);
         int jumsu = Integer.parseInt(sc.nextLine());
+        sc.close();
 
         if (jumsu >= 60) {
             System.out.println("합격입니다");

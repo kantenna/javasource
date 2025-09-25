@@ -27,6 +27,7 @@ public class IfEx3 {
 
         Scanner sc = new Scanner(System.in);
         int jumsu = Integer.parseInt(sc.nextLine());
+        sc.close();
 
         char grade = ' ', opt = '0';
 

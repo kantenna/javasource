@@ -13,6 +13,7 @@ public class SwitchEx1 {
         Scanner sc = new Scanner(System.in);
         System.out.println("현재 월을 입력하세요 : ");
         int month = Integer.parseInt(sc.nextLine());
+        sc.close();
 
         if (month >= 3 && month < 6) {
             System.out.println("현재 계절은 봄입니다.");

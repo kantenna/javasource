@@ -9,6 +9,7 @@ public class IfEx2 {
 
         Scanner sc = new Scanner(System.in);
         int jumsu = Integer.parseInt(sc.nextLine());
+        sc.close();
 
         // if~else if~else
         // if (jumsu >= 90) {

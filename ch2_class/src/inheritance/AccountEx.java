@@ -15,8 +15,18 @@ public class AccountEx {
             e.printStackTrace();
         }
 
+        CreditLineAccount creditLineAccount = new CreditLineAccount("333", "길동", 100000, 5000000);
+        try {
+            System.out.println("잔액 : " + creditLineAccount.withdraw(3000000));
+            System.out.println("잔액 : " + creditLineAccount.withdraw(3000000));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         BonusPointAccount bonusPointAccount = new BonusPointAccount("222", "성춘향", 0, 0);
         bonusPointAccount.deposit(300000);
         System.out.println("보너스 포인트 : " + bonusPointAccount.getBonusPoint());
+
     }
 }

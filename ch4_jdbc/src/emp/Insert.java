@@ -1,0 +1,32 @@
+package emp;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class Insert {
+    public static void main(String[] args) {
+        // db 서버 연결
+        try {
+            // 1. 드라이버 로드
+            Class.forName("oracle.jdbc.OracleDriver");
+            String url = "jdbc:oracle:thin:@localhost:1521:xe";
+            String user = "scott";
+            String password = "tiger";
+
+            // 2. DB 연결
+            Connection con = DriverManager.getConnection(url, user, password);
+
+            // 3. sql 구문
+            String sql = "INSERT  INTO EXAM_EMP(empno, ename, job, mgr, hiredate, sal, comm, deptno) ";
+            sql += "VALUES(1111,'홍길동1','PRESIDENT',null,'2000-01-01',1000,100,50)";
+
+            PreparedStatement pstmt = con.prepareStatement(sql);
+            int result = pstmt.executeUpdate();
+            System.out.println(result > 0 ? "입력 성공" : "입력 실패");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
